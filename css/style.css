@@ -116,7 +116,6 @@ header{
     }
 
     main .contenedor-carousel{
-        height: calc(100vh - 60px);
         margin-top: 250px;
         display: flex;
     }
@@ -131,6 +130,90 @@ header{
 
 .contenedor-carousel{
     margin: 45px;
-    height: calc(100vh - 60px);
     display: flex;
+    margin-bottom: 120px;
+}
+
+/* BIENVENIDA ZTR */
+
+.bienvenido-ztr img{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* TESTIMONIOS */
+
+.testimonios{
+    padding: 40px 0;
+    margin: 45px;
+    background: #e7e7e7;
+    color: black;
+    text-align: center;
+}
+
+.inner-testimonios{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.inner-testimonios h1{
+    font-size:45px;
+}
+
+.border-testimonios{
+    width: 160px;
+    height: 5px;
+    background-color: #E5D283;
+    margin: 26px auto;
+}
+
+.row-testimonios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-testimonios{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.testimonio{
+    background: #F0F0F0;
+    padding: 30px;
+}
+
+.testimonio img{
+    width: 90px;
+    height: 90px;
+}
+
+.name-testimonio{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.stars-testimonio{
+    color: #213555;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .col-testimonios{
+        flex: 100%;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .col-testimonios{
+        flex: 100%;
+        max-width: 100%;
+    }
 }

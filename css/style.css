@@ -28,7 +28,6 @@ li{
 }
 
 /* HEADER */
-
 header{
     position: relative;
     padding: 0 2rem;
@@ -64,7 +63,6 @@ header{
 }
 
 /* DROPDOWN MENU */
-
 .dropdown_menu{
     display: none;
     position: absolute;
@@ -101,7 +99,6 @@ header{
 }
 
 /* RESPONSIVE DESIGN - NAVBAR */
-
 @media(max-width: 992px){
     .navbar-principal .links-navbar{
         display: none;
@@ -135,7 +132,6 @@ header{
 }
 
 /* BIENVENIDA ZTR */
-
 .bienvenido-ztr img{
     max-width: 100%;
     display: block;
@@ -143,7 +139,6 @@ header{
 }
 
 /* TESTIMONIOS */
-
 .testimonios{
     padding: 40px 0;
     margin: 45px;
@@ -218,7 +213,6 @@ header{
 }
 
 /* IMAGEN LINK A GALERIA */
-
 .link-to-galeria h1{
     font-size: 55px;
     display: flex;
@@ -282,7 +276,6 @@ header{
 }
 
 /* EXPLORAR SERVICIOS */
-
 .explorar{
     margin: 150px auto;
     width: 70%;
@@ -339,8 +332,6 @@ header{
 }
 
 /* PAGINA GALERIA */
-/* ´PORTADA */
-
 .portada-galeria{
     overflow: hidden;
     position: relative;
@@ -490,7 +481,6 @@ header{
 }
 
 /* GALERIA GRID */
-
 .galeria-img{
     width: 100%;
     max-width: 1100px;
@@ -559,7 +549,6 @@ header{
 }
 
 /* NAV FOOTER */
-
 .navbar-foot{
     position: relative;
     padding: 0 2rem;
@@ -579,12 +568,10 @@ header{
 }
 
 /* FOOTER */
-
 .derechos{
     display: flex;
     margin: auto;
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
-
 }

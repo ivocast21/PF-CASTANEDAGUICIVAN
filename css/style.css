@@ -189,13 +189,13 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  .col-testimonios {
+  .testimonios .row-testimonios .col-testimonios {
     flex: 100%;
     max-width: 80%;
   }
 }
 @media screen and (max-width: 576px) {
-  .col-testimonios {
+  .testimonios .row-testimonios .col-testimonios {
     flex: 100%;
     max-width: 100%;
   }
@@ -490,12 +490,13 @@ header {
 .portada-servicios {
   padding: 25px;
   margin-top: 15px;
+  margin-bottom: 10px;
 }
 .portada-servicios h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 45px;
   text-align: center;
-  display: flex;
+  display: block;
   margin: auto;
   flex-wrap: wrap;
   margin-bottom: 10px;
@@ -511,7 +512,6 @@ header {
 }
 
 .servicios-galeria {
-  position: absolute;
   margin: auto;
   top: 0;
   bottom: 0;
@@ -525,6 +525,77 @@ header {
   height: 100%;
 }
 
+.servicios-productos {
+  padding: 30px;
+}
+.servicios-productos h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.servicios-productos p {
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-family: "Bodoni Moda", serif;
+  color: black;
+  font-size: 25px;
+}
+
+.card-servicios {
+  width: 320px;
+  height: 500px;
+  position: relative;
+}
+.card-servicios .img-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-servicios .card-body-servicios {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: rgba(31, 61, 71, 0.2196078431);
+  backdrop-filter: blur(5px);
+  color: #e7e7e7;
+  padding: 30px;
+}
+
+.card-title-servicios {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.card-sub-servicios {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.card-info-servicios {
+  font-size: 20px;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+.card-btn-servicios {
+  background: #E5D283;
+  color: #213555;
+  padding: 8px 15px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 /* NAV FOOTER */
 .navbar-foot {
   position: relative;
@@ -535,6 +606,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 25px;
 }
 
 .navbar-footer .links-navbar {

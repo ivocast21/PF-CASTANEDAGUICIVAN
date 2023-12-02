@@ -4,7 +4,9 @@ let imageURLs = [
     "../media/galeria-media/23.png",
     "../media/galeria-media/24.png",
     "../media/galeria-media/25.png",
-    "../media/galeria-media/26.png"
+    "../media/galeria-media/26.png",
+    "../media/galeria-media/11.png",
+    "../media/galeria-media/15.png"
 ];
 
 let deviceType = "";

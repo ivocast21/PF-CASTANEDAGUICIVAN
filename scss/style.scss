@@ -9,6 +9,11 @@ $color-p: black;
 $font-1: 'Montserrat', sans-serif;
 $font-2: 'Bodoni Moda', serif;
 $font-3: 'Roboto', sans-serif;
+$card-servicios-color: #F0F0F0;
+$card-color1: #213555;
+$card-title: black;
+$card-text: rgb(44, 44, 44);
+$card-body: #ffffff;
 
 body{
     height: 100vh;
@@ -550,6 +555,7 @@ header{
 
 .servicios-productos{
     padding: 30px;
+    margin-bottom: 0;
     h1{
         font-family: $font-1;
         font-size: 45px;
@@ -570,58 +576,166 @@ header{
 
 // Diseño de cards para los servicios*/
 
-.card-servicios{
-    width: 320px;
-    height: 500px;
-    position: relative;
-    .img-card{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+.seccion-servicios{
+    display: grid;
+    place-items: center;
+    margin-top: -14rem;
+    padding-block: 5rem;
+    .card-servicios{
+        display: grid;
+        row-gap: 3.5rem;
+        .article-servicios{
+            position: relative;
+            overflow: hidden;
+            .img-servicios{
+                width: 328px;
+                border-radius: 1.5rem;
+            }
+            .card-data-servicios{
+                width: 280px;
+                background-color: $card-servicios-color;
+                padding: 1.5rem 2rem;
+                box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+                border-radius: 1rem;
+                position: absolute;
+                bottom: -9rem;
+                left: 0;
+                right: 0;
+                margin-inline: auto;
+                opacity: 0;
+                transition: opacity 1s 1s;
+                .card-servicios-desc{
+                   display: block;
+                   font-size: 16px;
+                   margin-bottom: .25rem;
+                }
+                .card-title-servicios{
+                    font-size: 25px;
+                    font-weight: 500;
+                    color: $card-title;
+                    margin-bottom: .75rem;
+                }
+                .card-btn-servicios{
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $card-color1;
+                }
+                .card-btn-servicios:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
     }
-    .card-body-servicios{
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        position: absolute;
-        background: #1f3d4738;
-        backdrop-filter: blur(5px);
-        color: #e7e7e7;
-        padding: 30px;
+}
+
+// Nombramiento de las animaciones
+
+.seccion-servicios{
+    .card-servicios{
+        .article-servicios:hover{
+            animation: remove-overflow 2s forwards;
+            .card-data-servicios{
+                animation: show-data 1s forwards;
+                opacity: 1;
+                transition: opacity .3s;
+            }
+        }
+        .article-servicios:not(:hover){
+            animation: show-overflow 2s forwards;
+            .card-data-servicios{
+                animation: remove-data 1s forwards;
+            }
+        }
     }
 }
 
-.card-title-servicios{
-    font-size: 50px;
-    font-weight: 500;
+// Animaciones de las Cards
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem)
+    }
 }
 
-.card-sub-servicios{
-    font-size: 18px;
-    font-weight: 300;
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
 }
 
-.card-info-servicios{
-    font-size: 20px;
-    line-height: 25px;
-    margin: 40px 0;
-    font-weight: 400;
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
 }
 
-.card-btn-servicios{
-    background: #E5D283;
-    color: #213555;
-    padding: 8px 15px;
-    border-radius: 10px;
-    text-transform: capitalize;
-    border: none;
-    outline: none;
-    font-weight: 500;
-    cursor: pointer;
+@keyframes show-overflow{
+    0%{
+        opacity: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+    
 }
 
-/* NAV FOOTER */
+// Responsive Cards
+// Small devices
+
+@media screen and (max-width: 340px) {
+    .seccion-servicios{
+        margin-inline: 1rem;
+    }
+
+    .card-data-servicios{
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+// Medium devices
+
+@media screen and (min-width: 768px) {
+    .card-servicios{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+// Large devices
+
+@media screen and (min-width: 1120px) {
+    .seccion-servicios{
+       height: 100vh;
+    }
+
+    .card-servicios{
+        grid-template-columns:repeat(3, 1fr) ;
+    }
+
+    .img-servicios{
+        width: 348px;
+    }
+
+    .card-data-servicios{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+
+// /* NAV FOOTER */
+
 .navbar-foot{
     position: relative;
     padding: 0 2rem;

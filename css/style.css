@@ -527,6 +527,7 @@ header {
 
 .servicios-productos {
   padding: 30px;
+  margin-bottom: 0;
 }
 .servicios-productos h1 {
   font-family: "Montserrat", sans-serif;
@@ -545,58 +546,137 @@ header {
   font-size: 25px;
 }
 
-.card-servicios {
-  width: 320px;
-  height: 500px;
+.seccion-servicios {
+  display: grid;
+  place-items: center;
+  margin-top: -14rem;
+  padding-block: 5rem;
+}
+.seccion-servicios .card-servicios {
+  display: grid;
+  row-gap: 3.5rem;
+}
+.seccion-servicios .card-servicios .article-servicios {
   position: relative;
+  overflow: hidden;
 }
-.card-servicios .img-card {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.seccion-servicios .card-servicios .article-servicios .img-servicios {
+  width: 328px;
+  border-radius: 1.5rem;
 }
-.card-servicios .card-body-servicios {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
+.seccion-servicios .card-servicios .article-servicios .card-data-servicios {
+  width: 280px;
+  background-color: #F0F0F0;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 1rem;
   position: absolute;
-  background: rgba(31, 61, 71, 0.2196078431);
-  backdrop-filter: blur(5px);
-  color: #e7e7e7;
-  padding: 30px;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
 }
-
-.card-title-servicios {
-  font-size: 50px;
+.seccion-servicios .card-servicios .article-servicios .card-data-servicios .card-servicios-desc {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 0.25rem;
+}
+.seccion-servicios .card-servicios .article-servicios .card-data-servicios .card-title-servicios {
+  font-size: 25px;
   font-weight: 500;
+  color: black;
+  margin-bottom: 0.75rem;
 }
-
-.card-sub-servicios {
-  font-size: 18px;
-  font-weight: 300;
-}
-
-.card-info-servicios {
-  font-size: 20px;
-  line-height: 25px;
-  margin: 40px 0;
-  font-weight: 400;
-}
-
-.card-btn-servicios {
-  background: #E5D283;
+.seccion-servicios .card-servicios .article-servicios .card-data-servicios .card-btn-servicios {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
   color: #213555;
-  padding: 8px 15px;
-  border-radius: 10px;
-  text-transform: capitalize;
-  border: none;
-  outline: none;
-  font-weight: 500;
-  cursor: pointer;
+}
+.seccion-servicios .card-servicios .article-servicios .card-data-servicios .card-btn-servicios:hover {
+  text-decoration: underline;
 }
 
-/* NAV FOOTER */
+.seccion-servicios .card-servicios .article-servicios:hover {
+  animation: remove-overflow 2s forwards;
+}
+.seccion-servicios .card-servicios .article-servicios:hover .card-data-servicios {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.seccion-servicios .card-servicios .article-servicios:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+.seccion-servicios .card-servicios .article-servicios:not(:hover) .card-data-servicios {
+  animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+@keyframes show-overflow {
+  0% {
+    opacity: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 340px) {
+  .seccion-servicios {
+    margin-inline: 1rem;
+  }
+  .card-data-servicios {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-servicios {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .seccion-servicios {
+    height: 100vh;
+  }
+  .card-servicios {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .img-servicios {
+    width: 348px;
+  }
+  .card-data-servicios {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
 .navbar-foot {
   position: relative;
   padding: 0 2rem;

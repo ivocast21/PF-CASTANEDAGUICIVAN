@@ -555,7 +555,7 @@ header{
 
 .servicios-productos{
     padding: 30px;
-    margin-bottom: 0;
+    margin-top: 2rem;
     h1{
         font-family: $font-1;
         font-size: 45px;
@@ -579,7 +579,7 @@ header{
 .seccion-servicios{
     display: grid;
     place-items: center;
-    margin-top: -14rem;
+    margin-top: 1rem;
     padding-block: 5rem;
     .card-servicios{
         display: grid;
@@ -590,6 +590,10 @@ header{
             .img-servicios{
                 width: 328px;
                 border-radius: 1.5rem;
+                transition: 1s ease;
+            }
+            .img-servicios:hover{
+                filter: brightness(10%);
             }
             .card-data-servicios{
                 width: 280px;
@@ -693,9 +697,10 @@ header{
 // Responsive Cards
 // Small devices
 
-@media screen and (max-width: 340px) {
+@media screen and (min-width: 340px) {
     .seccion-servicios{
         margin-inline: 1rem;
+        margin-top: -5rem;
     }
 
     .card-data-servicios{
@@ -711,13 +716,16 @@ header{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1.5rem;
     }
+    .seccion-servicios{
+        margin-top: -5rem;
+    }
 }
 
 // Large devices
 
 @media screen and (min-width: 1120px) {
     .seccion-servicios{
-       height: 100vh;
+       height: 100vh; 
     }
 
     .card-servicios{
@@ -731,6 +739,39 @@ header{
     .card-data-servicios{
         width: 316px;
         padding-inline: 2.5rem;
+    }
+}
+
+// Seccion de servicios con detalle
+
+.cover-art-portada{
+    img{
+        display: flex;
+        margin: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+.productos-servicios{
+    .coverdesign{
+        p{
+            display: flex;
+            margin: auto;
+            flex-wrap: wrap;
+            font-family: $font-1;
+            font-size: 19px;
+            text-align: center;
+            padding: 18px;
+        }
+        h1{
+            display: block;
+            margin: auto;
+            flex-wrap: wrap;
+            font-family: $font-1;
+            text-align: center;
+            font-size: 35px;
+        }
     }
 }
 

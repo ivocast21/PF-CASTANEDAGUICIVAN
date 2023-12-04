@@ -527,7 +527,7 @@ header {
 
 .servicios-productos {
   padding: 30px;
-  margin-bottom: 0;
+  margin-top: 2rem;
 }
 .servicios-productos h1 {
   font-family: "Montserrat", sans-serif;
@@ -549,7 +549,7 @@ header {
 .seccion-servicios {
   display: grid;
   place-items: center;
-  margin-top: -14rem;
+  margin-top: 1rem;
   padding-block: 5rem;
 }
 .seccion-servicios .card-servicios {
@@ -563,6 +563,10 @@ header {
 .seccion-servicios .card-servicios .article-servicios .img-servicios {
   width: 328px;
   border-radius: 1.5rem;
+  transition: 1s ease;
+}
+.seccion-servicios .card-servicios .article-servicios .img-servicios:hover {
+  filter: brightness(10%);
 }
 .seccion-servicios .card-servicios .article-servicios .card-data-servicios {
   width: 280px;
@@ -647,9 +651,10 @@ header {
     overflow: hidden;
   }
 }
-@media screen and (max-width: 340px) {
+@media screen and (min-width: 340px) {
   .seccion-servicios {
     margin-inline: 1rem;
+    margin-top: -5rem;
   }
   .card-data-servicios {
     width: 250px;
@@ -660,6 +665,9 @@ header {
   .card-servicios {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.5rem;
+  }
+  .seccion-servicios {
+    margin-top: -5rem;
   }
 }
 @media screen and (min-width: 1120px) {
@@ -677,6 +685,31 @@ header {
     padding-inline: 2.5rem;
   }
 }
+.cover-art-portada img {
+  display: flex;
+  margin: auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.productos-servicios .coverdesign p {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  font-size: 19px;
+  text-align: center;
+  padding: 18px;
+}
+.productos-servicios .coverdesign h1 {
+  display: block;
+  margin: auto;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 35px;
+}
+
 .navbar-foot {
   position: relative;
   padding: 0 2rem;

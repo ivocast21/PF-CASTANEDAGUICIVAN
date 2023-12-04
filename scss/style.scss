@@ -753,8 +753,29 @@ header{
     }
 }
 
+.posters-art-portada{
+    img{
+        display: flex;
+        margin: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+.social-art-portada{
+    img{
+        display: flex;
+        margin: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
 .productos-servicios{
-    .coverdesign{
+    margin-bottom: 3rem;
+    .ejemplosdesign{
+        background-color: #e7e7e7;
+        padding: 1rem;
         p{
             display: flex;
             margin: auto;
@@ -772,6 +793,48 @@ header{
             text-align: center;
             font-size: 35px;
         }
+    }
+}
+
+.galeria-imagenes{
+    margin-bottom: 4rem;
+    .contenedor-galeria{
+        width: 100%;
+        margin: auto;
+        display: grid;
+        .galeria-columna{
+            margin: 5px;
+            img{
+                width: 100%;
+                transition: 1s ease;
+            }
+            img:hover{
+                filter: brightness(30%);
+            }
+        }
+    }
+}
+
+@media(min-width:520px){
+    .galeria-imagenes{
+        .contenedor-galeria{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media(min-width:728px){
+    .galeria-imagenes{
+        .contenedor-galeria{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.ejemplo-soc{
+    img{    
+        width: 100%;
+        height: auto;
     }
 }
 

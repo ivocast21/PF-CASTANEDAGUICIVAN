@@ -692,7 +692,28 @@ header {
   padding: 10px;
 }
 
-.productos-servicios .coverdesign p {
+.posters-art-portada img {
+  display: flex;
+  margin: auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.social-art-portada img {
+  display: flex;
+  margin: auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.productos-servicios {
+  margin-bottom: 3rem;
+}
+.productos-servicios .ejemplosdesign {
+  background-color: #e7e7e7;
+  padding: 1rem;
+}
+.productos-servicios .ejemplosdesign p {
   display: flex;
   margin: auto;
   flex-wrap: wrap;
@@ -701,13 +722,47 @@ header {
   text-align: center;
   padding: 18px;
 }
-.productos-servicios .coverdesign h1 {
+.productos-servicios .ejemplosdesign h1 {
   display: block;
   margin: auto;
   flex-wrap: wrap;
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-size: 35px;
+}
+
+.galeria-imagenes {
+  margin-bottom: 4rem;
+}
+.galeria-imagenes .contenedor-galeria {
+  width: 100%;
+  margin: auto;
+  display: grid;
+}
+.galeria-imagenes .contenedor-galeria .galeria-columna {
+  margin: 5px;
+}
+.galeria-imagenes .contenedor-galeria .galeria-columna img {
+  width: 100%;
+  transition: 1s ease;
+}
+.galeria-imagenes .contenedor-galeria .galeria-columna img:hover {
+  filter: brightness(30%);
+}
+
+@media (min-width: 520px) {
+  .galeria-imagenes .contenedor-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 728px) {
+  .galeria-imagenes .contenedor-galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.ejemplo-soc img {
+  width: 100%;
+  height: auto;
 }
 
 .navbar-foot {

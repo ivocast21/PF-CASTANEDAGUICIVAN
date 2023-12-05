@@ -111,6 +111,9 @@ header {
     margin-top: 250px;
     display: flex;
   }
+  body .portada-galeria {
+    margin-top: 17rem;
+  }
 }
 @media (max-width: 576px) {
   .dropdown_menu {
@@ -450,6 +453,10 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.6s ease;
+}
+.galeria-img .box-galeria-img img:hover {
+  filter: brightness(30%);
 }
 .galeria-img .box-galeria-img:nth-child(1) {
   grid-column-start: span 2;
@@ -831,6 +838,53 @@ header {
 }
 .ejemplo-soc img:hover {
   filter: brightness(30%);
+}
+
+.portada-acerca-de {
+  background-color: #4F709C;
+  margin-top: 2rem;
+}
+.portada-acerca-de img {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+
+.historia {
+  display: block;
+  margin: auto;
+  margin-top: 10rem;
+}
+.historia h1 {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Gasoek One", sans-serif;
+  line-height: 6rem;
+  font-size: 7rem;
+  padding: 2rem;
+}
+.historia p {
+  display: flex;
+  margin: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.historia img {
+  width: 75%;
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  transition: 0.7s ease;
+}
+.historia img:hover {
+  filter: brightness(40%);
 }
 
 .navbar-foot {

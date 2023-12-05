@@ -781,7 +781,7 @@ header{
             margin: auto;
             flex-wrap: wrap;
             font-family: $font-1;
-            font-size: 19px;
+            font-size: 21px;
             text-align: center;
             padding: 18px;
         }
@@ -802,10 +802,13 @@ header{
         width: 100%;
         margin: auto;
         display: grid;
+        justify-content: center;
         .galeria-columna{
             margin: 5px;
             img{
-                width: 100%;
+                display: block;
+                margin: auto;
+                width: 75%;
                 transition: 1s ease;
             }
             img:hover{
@@ -814,6 +817,68 @@ header{
         }
     }
 }
+
+.explorar{
+    margin: 150px auto;
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .servicio-to-contacto{
+        h1{
+            display: block;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            font: $font-1;
+            color: $card-text;
+            margin-bottom: 1rem;
+        }
+    }
+    .img-to-contacto{
+        img{
+         width: 75%;
+         display: block;
+         margin: auto;
+         justify-content: center;
+        }
+     }
+     
+     .texto-to-contacto{
+         p{
+             color: $color-p;
+             font-family: $font-3;
+             font-size: 24px;
+             display: flex;
+             justify-content: center;
+             text-align: center;
+             margin-top: 1rem;
+         }
+         .action-button{
+             text-decoration: none;
+             font-family: $font-1;
+             color: white;
+             display: block;
+             margin: auto;
+             outline: none;
+             padding: 0.5rem 1rem;
+             background-color: #213555;
+             font-size: 0.8rem;
+             font-weight: bold;
+             border-radius: 20px;
+             text-align: center;
+             cursor: pointer;
+             transition: 0.5s ease;
+         }
+         .action-button:hover{
+             transition: 0.5s ease;
+             background-color: white;
+             color: #213555;
+             border: solid 2px #213555;
+         }
+     }
+}
+
 
 @media(min-width:520px){
     .galeria-imagenes{
@@ -832,9 +897,18 @@ header{
 }
 
 .ejemplo-soc{
+    display: block;
+    margin: auto;
+    justify-content: center;
     img{    
-        width: 100%;
+        display: block;
+        margin: auto;
+        width: 75%;
         height: auto;
+        transition: 1s ease;
+    }
+    img:hover{
+        filter: brightness(30%);
     }
 }
 

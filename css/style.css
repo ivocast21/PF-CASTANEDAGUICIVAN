@@ -718,7 +718,7 @@ header {
   margin: auto;
   flex-wrap: wrap;
   font-family: "Montserrat", sans-serif;
-  font-size: 19px;
+  font-size: 21px;
   text-align: center;
   padding: 18px;
 }
@@ -738,16 +738,73 @@ header {
   width: 100%;
   margin: auto;
   display: grid;
+  justify-content: center;
 }
 .galeria-imagenes .contenedor-galeria .galeria-columna {
   margin: 5px;
 }
 .galeria-imagenes .contenedor-galeria .galeria-columna img {
-  width: 100%;
+  display: block;
+  margin: auto;
+  width: 75%;
   transition: 1s ease;
 }
 .galeria-imagenes .contenedor-galeria .galeria-columna img:hover {
   filter: brightness(30%);
+}
+
+.explorar {
+  margin: 150px auto;
+  width: 70%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.explorar .servicio-to-contacto h1 {
+  display: block;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  font: "Montserrat", sans-serif;
+  color: rgb(44, 44, 44);
+  margin-bottom: 1rem;
+}
+.explorar .img-to-contacto img {
+  width: 75%;
+  display: block;
+  margin: auto;
+  justify-content: center;
+}
+.explorar .texto-to-contacto p {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+.explorar .texto-to-contacto .action-button {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  display: block;
+  margin: auto;
+  outline: none;
+  padding: 0.5rem 1rem;
+  background-color: #213555;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.explorar .texto-to-contacto .action-button:hover {
+  transition: 0.5s ease;
+  background-color: white;
+  color: #213555;
+  border: solid 2px #213555;
 }
 
 @media (min-width: 520px) {
@@ -760,9 +817,20 @@ header {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.ejemplo-soc {
+  display: block;
+  margin: auto;
+  justify-content: center;
+}
 .ejemplo-soc img {
-  width: 100%;
+  display: block;
+  margin: auto;
+  width: 75%;
   height: auto;
+  transition: 1s ease;
+}
+.ejemplo-soc img:hover {
+  filter: brightness(30%);
 }
 
 .navbar-foot {

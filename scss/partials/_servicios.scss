@@ -1,0 +1,244 @@
+// Variables
+
+$color-h1-noground: black;
+$color-p: rgb(21, 9, 9);
+$font-1: 'Montserrat', sans-serif;
+$font-2: 'Bodoni Moda', serif;
+$font-3: 'Roboto', sans-serif;
+$font-fat: 'Gasoek One', sans-serif;
+$card-servicios-color: #F0F0F0;
+$card-color1: #213555;
+$card-title: black;
+$card-text: rgb(44, 44, 44);
+$card-body: #ffffff;
+
+// Partial dedicado a todo lo relacionado con los servicios de la pagina
+
+// Pagina de servicios.
+.portada-servicios{
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    h1{
+        font-family: $font-1;
+        font-size: 45px;
+        text-align: center;
+        display: block;
+        margin: auto;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    p{
+        text-align: center;
+        font-family: $font-3;
+        font-size: 19px;
+        color: #000000;
+        display: block;
+        margin: auto;
+        background: linear-gradient(90deg, rgb(255, 223, 118) 0%, rgb(155, 176, 188) 35%, rgba(0,212,255,1) 100%);;
+    }
+}
+
+// Diseño de accordion.
+
+.servicios-galeria{
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50vh;
+}
+
+.item{
+    height: 100%;
+}
+
+.servicios-productos{
+    padding: 30px;
+    margin-top: 2rem;
+    h1{
+        font-family: $font-1;
+        font-size: 45px;
+        text-align: center;
+        display: block;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    p{
+        text-align: center;
+        display: block;
+        margin: auto;
+        font-family: $font-2;
+        color: $color-p;
+        font-size: 25px;
+    }
+}
+
+// Diseño de cards para los servicios*/
+
+.seccion-servicios{
+    display: grid;
+    place-items: center;
+    margin-top: 1rem;
+    padding-block: 5rem;
+    .card-servicios{
+        display: grid;
+        row-gap: 3.5rem;
+        .article-servicios{
+            position: relative;
+            overflow: hidden;
+            .img-servicios{
+                width: 328px;
+                border-radius: 1.5rem;
+                transition: 1s ease;
+            }
+            .img-servicios:hover{
+                filter: brightness(10%);
+            }
+            .card-data-servicios{
+                width: 280px;
+                background-color: $card-servicios-color;
+                padding: 1.5rem 2rem;
+                box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+                border-radius: 1rem;
+                position: absolute;
+                bottom: -9rem;
+                left: 0;
+                right: 0;
+                margin-inline: auto;
+                opacity: 0;
+                transition: opacity 1s 1s;
+                .card-servicios-desc{
+                   display: block;
+                   font-size: 16px;
+                   margin-bottom: .25rem;
+                }
+                .card-title-servicios{
+                    font-size: 25px;
+                    font-weight: 500;
+                    color: $card-title;
+                    margin-bottom: .75rem;
+                }
+                .card-btn-servicios{
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $card-color1;
+                }
+                .card-btn-servicios:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Nombramiento de las animaciones
+
+.seccion-servicios{
+    .card-servicios{
+        .article-servicios:hover{
+            animation: remove-overflow 2s forwards;
+            .card-data-servicios{
+                animation: show-data 1s forwards;
+                opacity: 1;
+                transition: opacity .3s;
+            }
+        }
+        .article-servicios:not(:hover){
+            animation: show-overflow 2s forwards;
+            .card-data-servicios{
+                animation: remove-data 1s forwards;
+            }
+        }
+    }
+}
+
+// Animaciones de las Cards
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem)
+    }
+}
+
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow{
+    0%{
+        opacity: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+    
+}
+
+// Seccion de servicios con detalle
+
+.cover-art-portada{
+    img{
+        @include img-responsive;
+        padding: 10px;
+    }
+}
+
+.posters-art-portada{
+    img{
+        @include img-responsive;
+        padding: 10px;
+    }
+}
+
+.social-art-portada{
+    img{
+        @include img-responsive;
+        padding: 10px;
+    }
+}
+
+.productos-servicios{
+    margin-bottom: 3rem;
+    .ejemplosdesign{
+        background-color: #e7e7e7;
+        padding: 1rem;
+        p{
+            @include flex;
+            margin: auto;
+            flex-wrap: wrap;
+            font-family: $font-1;
+            font-size: 21px;
+            padding: 18px;
+        }
+        h1{
+            display: block;
+            margin: auto;
+            flex-wrap: wrap;
+            font-family: $font-1;
+            text-align: center;
+            font-size: 35px;
+        }
+    }
+}

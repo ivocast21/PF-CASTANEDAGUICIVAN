@@ -1,0 +1,76 @@
+// Variables
+
+$color-h1-noground: black;
+$color-p: rgb(21, 9, 9);
+$font-1: 'Montserrat', sans-serif;
+$font-2: 'Bodoni Moda', serif;
+$font-3: 'Roboto', sans-serif;
+$font-fat: 'Gasoek One', sans-serif;
+$card-servicios-color: #F0F0F0;
+$card-color1: #213555;
+$card-title: black;
+$card-text: rgb(44, 44, 44);
+$card-body: #ffffff;
+
+// Partial dedicado a todos los elementos de link
+
+// Seccion de link to contacto-
+
+.explorar{
+    margin: 150px auto;
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .servicio-to-contacto{
+        h1{
+            display: block;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            font-size: 3rem;
+            font-family: $font-1;
+            font-weight: 500;
+            color: $card-text;
+            margin-bottom: 1rem;
+        }
+    }
+    .img-to-contacto{
+        img{
+         @include img-responsive;
+         justify-content: center;
+        }
+     }
+     
+     .texto-to-contacto{
+         p{
+             color: $color-p;
+             font-family: $font-3;
+             font-size: 24px;
+             @include flex;
+             margin-top: 1rem;
+         }
+         .action-button{
+             text-decoration: none;
+             font-family: $font-1;
+             color: white;
+             display: block;
+             margin: auto;
+             outline: none;
+             padding: 0.5rem 1rem;
+             background-color: #213555;
+             font-size: 1rem;
+             font-weight: bold;
+             border-radius: 20px;
+             text-align: center;
+             cursor: pointer;
+             transition: 0.5s ease;
+         }
+         .action-button:hover{
+             transition: 0.5s ease;
+             background-color: white;
+             color: #213555;
+             border: solid 2px #213555;
+         }
+     }
+}

@@ -1,0 +1,11 @@
+@mixin img-responsive{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

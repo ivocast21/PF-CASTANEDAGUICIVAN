@@ -1,0 +1,70 @@
+// Variables
+
+$color-h1-noground: black;
+$color-p: rgb(21, 9, 9);
+$font-1: 'Montserrat', sans-serif;
+$font-2: 'Bodoni Moda', serif;
+$font-3: 'Roboto', sans-serif;
+$font-fat: 'Gasoek One', sans-serif;
+$card-servicios-color: #F0F0F0;
+$card-color1: #213555;
+$card-title: black;
+$card-text: rgb(44, 44, 44);
+$card-body: #ffffff;
+
+/* TESTIMONIOS */
+.testimonios{
+    padding: 40px 0;
+    margin: 45px;
+    background: #e7e7e7;
+    color: black;
+    text-align: center;
+    .inner-testimonios{
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 20px;
+        h1{
+            font-size:45px;
+            color: $color-h1-noground;
+            font-family: $font-1;
+        }
+    } 
+    .border-testimonios{
+        width: 160px;
+        height: 5px;
+        background-color: #E5D283;
+        margin: 26px auto;
+    }
+    .row-testimonios{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col-testimonios{
+        flex: 33.33%;
+        max-width: 33.33%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+    .testimonio{
+        background: #F0F0F0;
+        padding: 30px;
+        img{
+            width: 90px;
+            height: 90px;
+        }
+        p{
+            font-family: $font-2;
+        }
+    }  
+    .name-testimonio{
+        font-size: 20px;
+        font-family: $font-1;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+    .stars-testimonio{
+        color: #213555;
+    }
+}

@@ -4,18 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  background-color: black;
-  background-image: url(../media/background-image.png);
-  background-size: cover;
-  background-position: center;
-}
-
-li {
-  list-style: none;
-}
-
 .links-navbar a {
   text-decoration: none;
   color: black;
@@ -107,13 +95,6 @@ header {
   .dropdown_menu {
     display: block;
   }
-  main .contenedor-carousel {
-    margin-top: 250px;
-    display: flex;
-  }
-  body .portada-galeria {
-    margin-top: 17rem;
-  }
 }
 @media (max-width: 576px) {
   .dropdown_menu {
@@ -121,19 +102,6 @@ header {
     width: unset;
   }
 }
-.contenedor-carousel {
-  margin: 45px;
-  display: flex;
-  margin-bottom: 120px;
-}
-
-/* BIENVENIDA ZTR */
-.bienvenido-ztr img {
-  max-width: 100%;
-  display: block;
-  margin: auto;
-}
-
 /* TESTIMONIOS */
 .testimonios {
   padding: 40px 0;
@@ -191,18 +159,14 @@ header {
   color: #213555;
 }
 
-@media screen and (max-width: 992px) {
-  .testimonios .row-testimonios .col-testimonios {
-    flex: 100%;
-    max-width: 80%;
-  }
+.body, .body-general {
+  height: 100vh;
+  background-color: black;
+  background-image: url(../media/background-image.png);
+  background-size: cover;
+  background-position: center;
 }
-@media screen and (max-width: 576px) {
-  .testimonios .row-testimonios .col-testimonios {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
+
 /* IMAGEN LINK A GALERIA */
 .link-to-galeria h1 {
   font-size: 55px;
@@ -219,24 +183,24 @@ header {
   color: #213555;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   text-align: center;
+  flex-wrap: wrap;
 }
 .link-to-galeria p {
-  color: black;
+  color: rgb(21, 9, 9);
   font-family: "Bodoni Moda", serif;
   display: flex;
-  text-align: center;
   justify-content: center;
+  text-align: center;
   flex-wrap: wrap;
   margin: 10px;
   font-size: 18px;
 }
 .link-to-galeria img {
   max-width: 100%;
-  width: 1600px;
   display: block;
   margin: auto;
+  width: 1600px;
   margin-bottom: 50px;
   transition: 0.5s ease-out;
 }
@@ -260,74 +224,16 @@ header {
 
 .separador-galeria-servicios {
   display: flex;
-  margin: 50px;
-  padding: 10px;
   justify-content: center;
   text-align: center;
+  margin: 50px;
+  padding: 10px;
   background-color: #E5D283;
 }
 
 .separador-galeria-servicios p {
   margin: auto;
   font-family: "Montserrat", sans-serif;
-}
-
-/* EXPLORAR SERVICIOS */
-.explorar {
-  margin: 150px auto;
-  width: 70%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.img-explorer {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  max-width: 100%;
-  height: 70px;
-}
-
-.texto-explorar h1 {
-  font-size: 40px;
-  color: black;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  clear: both;
-  margin-top: 20px;
-}
-.texto-explorar p {
-  color: black;
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.texto-explorar .action-button {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  display: block;
-  margin: auto;
-  outline: none;
-  padding: 0.5rem 1rem;
-  background-color: #213555;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 20px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-.texto-explorar .action-button:hover {
-  transition: 0.5s ease;
-  background-color: white;
-  color: #213555;
-  border: solid 2px #213555;
 }
 
 /* PAGINA GALERIA */
@@ -494,6 +400,28 @@ header {
     grid-column-start: span 2;
   }
 }
+.galeria-imagenes {
+  margin-bottom: 4rem;
+}
+.galeria-imagenes .contenedor-galeria {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+}
+.galeria-imagenes .contenedor-galeria .galeria-columna {
+  margin: 5px;
+}
+.galeria-imagenes .contenedor-galeria .galeria-columna img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  transition: 1s ease;
+}
+.galeria-imagenes .contenedor-galeria .galeria-columna img:hover {
+  filter: brightness(30%);
+}
+
 .portada-servicios {
   padding: 25px;
   margin-top: 15px;
@@ -549,7 +477,7 @@ header {
   display: block;
   margin: auto;
   font-family: "Bodoni Moda", serif;
-  color: black;
+  color: rgb(21, 9, 9);
   font-size: 25px;
 }
 
@@ -658,6 +586,109 @@ header {
     overflow: hidden;
   }
 }
+.cover-art-portada img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+.posters-art-portada img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+.social-art-portada img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+.productos-servicios {
+  margin-bottom: 3rem;
+}
+.productos-servicios .ejemplosdesign {
+  background-color: #e7e7e7;
+  padding: 1rem;
+}
+.productos-servicios .ejemplosdesign p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  padding: 18px;
+}
+.productos-servicios .ejemplosdesign h1 {
+  display: block;
+  margin: auto;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 35px;
+}
+
+.explorar {
+  margin: 150px auto;
+  width: 70%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.explorar .servicio-to-contacto h1 {
+  display: block;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: rgb(44, 44, 44);
+  margin-bottom: 1rem;
+}
+.explorar .img-to-contacto img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  justify-content: center;
+}
+.explorar .texto-to-contacto p {
+  color: rgb(21, 9, 9);
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+.explorar .texto-to-contacto .action-button {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  display: block;
+  margin: auto;
+  outline: none;
+  padding: 0.5rem 1rem;
+  background-color: #213555;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.explorar .texto-to-contacto .action-button:hover {
+  transition: 0.5s ease;
+  background-color: white;
+  color: #213555;
+  border: solid 2px #213555;
+}
+
 @media screen and (min-width: 340px) {
   .seccion-servicios {
     margin-inline: 1rem;
@@ -692,106 +723,95 @@ header {
     padding-inline: 2.5rem;
   }
 }
-.cover-art-portada img {
-  display: flex;
-  margin: auto;
-  max-width: 100%;
-  padding: 10px;
+@media (min-width: 520px) {
+  .galeria-imagenes .contenedor-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 728px) {
+  .galeria-imagenes .contenedor-galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 992px) {
+  .testimonios .row-testimonios .col-testimonios {
+    flex: 100%;
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .testimonios .row-testimonios .col-testimonios {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  main .contenedor-carousel {
+    margin-top: 250px;
+    display: flex;
+  }
+  body .portada-galeria {
+    margin-top: 17rem;
+  }
+}
+.info-nosotros {
+  background-color: #4F709C;
 }
 
-.posters-art-portada img {
-  display: flex;
-  margin: auto;
-  max-width: 100%;
-  padding: 10px;
+li {
+  list-style: none;
 }
 
-.social-art-portada img {
+.contenedor-carousel {
+  margin: 45px;
   display: flex;
-  margin: auto;
-  max-width: 100%;
-  padding: 10px;
-}
-
-.productos-servicios {
-  margin-bottom: 3rem;
-}
-.productos-servicios .ejemplosdesign {
-  background-color: #e7e7e7;
-  padding: 1rem;
-}
-.productos-servicios .ejemplosdesign p {
-  display: flex;
-  margin: auto;
-  flex-wrap: wrap;
-  font-family: "Montserrat", sans-serif;
-  font-size: 21px;
-  text-align: center;
-  padding: 18px;
-}
-.productos-servicios .ejemplosdesign h1 {
-  display: block;
-  margin: auto;
-  flex-wrap: wrap;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  font-size: 35px;
-}
-
-.galeria-imagenes {
-  margin-bottom: 4rem;
-}
-.galeria-imagenes .contenedor-galeria {
-  width: 100%;
-  margin: auto;
-  display: grid;
   justify-content: center;
-}
-.galeria-imagenes .contenedor-galeria .galeria-columna {
-  margin: 5px;
-}
-.galeria-imagenes .contenedor-galeria .galeria-columna img {
-  display: block;
-  margin: auto;
-  width: 75%;
-  transition: 1s ease;
-}
-.galeria-imagenes .contenedor-galeria .galeria-columna img:hover {
-  filter: brightness(30%);
+  margin-bottom: 120px;
 }
 
+/* BIENVENIDA ZTR */
+.bienvenido-ztr img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+/* EXPLORAR SERVICIOS */
 .explorar {
   margin: 150px auto;
   width: 70%;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.explorar .servicio-to-contacto h1 {
-  display: block;
+
+.img-explorer {
+  display: flex;
   margin: auto;
+  justify-content: center;
+  max-width: 100%;
+  height: 70px;
+}
+
+.texto-explorar h1 {
+  font-size: 40px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-  font: "Montserrat", sans-serif;
-  color: rgb(44, 44, 44);
-  margin-bottom: 1rem;
+  clear: both;
+  margin-top: 20px;
 }
-.explorar .img-to-contacto img {
-  width: 75%;
-  display: block;
-  margin: auto;
-  justify-content: center;
-}
-.explorar .texto-to-contacto p {
-  color: black;
+.texto-explorar p {
+  color: rgb(21, 9, 9);
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 1rem;
 }
-.explorar .texto-to-contacto .action-button {
+.texto-explorar .action-button {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -807,32 +827,22 @@ header {
   cursor: pointer;
   transition: 0.5s ease;
 }
-.explorar .texto-to-contacto .action-button:hover {
+.texto-explorar .action-button:hover {
   transition: 0.5s ease;
   background-color: white;
   color: #213555;
   border: solid 2px #213555;
 }
 
-@media (min-width: 520px) {
-  .galeria-imagenes .contenedor-galeria {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 728px) {
-  .galeria-imagenes .contenedor-galeria {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 .ejemplo-soc {
   display: block;
   margin: auto;
   justify-content: center;
 }
 .ejemplo-soc img {
+  max-width: 100%;
   display: block;
   margin: auto;
-  width: 75%;
   height: auto;
   transition: 1s ease;
 }
@@ -857,24 +867,26 @@ header {
 }
 .historia h1 {
   display: flex;
-  margin: auto;
   justify-content: center;
   text-align: center;
+  margin: auto;
   font-family: "Gasoek One", sans-serif;
   line-height: 6rem;
   font-size: 7rem;
   padding: 2rem;
+  color: #F0F0F0;
 }
 .historia p {
   display: flex;
+  justify-content: center;
+  text-align: center;
   margin: 5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  justify-content: center;
-  text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   padding: 1rem;
+  color: #E5D283;
 }
 .historia img {
   width: 75%;
@@ -885,6 +897,94 @@ header {
 }
 .historia img:hover {
   filter: brightness(40%);
+}
+
+.pasos-y-disciplina {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.pasos-y-disciplina .pasos {
+  padding: 1rem;
+  margin: 2rem;
+  margin-left: 3rem;
+}
+.pasos-y-disciplina .pasos h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Gasoek One", sans-serif;
+  text-align: center;
+  font-size: 5rem;
+  color: #F0F0F0;
+}
+.pasos-y-disciplina .pasos p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  padding: 1rem;
+  color: #E5D283;
+}
+.pasos-y-disciplina .disciplina {
+  padding: 1rem;
+  margin: 2rem;
+  margin-right: 3rem;
+}
+.pasos-y-disciplina .disciplina h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Gasoek One", sans-serif;
+  text-align: center;
+  font-size: 5rem;
+  color: #F0F0F0;
+}
+.pasos-y-disciplina .disciplina p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  padding: 1rem;
+  color: #E5D283;
+}
+
+.desarrollo .crecimiento h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  font-family: "Gasoek One", sans-serif;
+  line-height: 6rem;
+  font-size: 7rem;
+  padding: 2rem;
+  color: #F0F0F0;
+}
+.desarrollo .crecimiento p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #E5D283;
+}
+
+.separador-acerca img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
 }
 
 .navbar-foot {
@@ -909,10 +1009,10 @@ header {
 /* FOOTER */
 .derechos {
   display: flex;
-  margin: auto;
-  text-align: center;
-  flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */

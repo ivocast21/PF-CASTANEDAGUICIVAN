@@ -1,0 +1,109 @@
+// Variables
+
+$color-p: rgb(21, 9, 9);
+$font-1: 'Montserrat', sans-serif;
+$font-2: 'Bodoni Moda', serif;
+$font-3: 'Roboto', sans-serif;
+$font-fat: 'Gasoek One', sans-serif;
+$card-servicios-color: #F0F0F0;
+$card-color1: #213555;
+$card-title: black;
+$card-text: rgb(44, 44, 44);
+$card-body: #ffffff;
+
+.links-navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-family: $font-1;
+}
+.links-navbar a:hover{
+    color: rgb(250, 215, 37);
+}
+
+/* HEADER */
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar-principal{
+    width: 100%;
+    height: 60px;
+    padding: 40px;
+    padding-bottom: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-navbar a img{
+        max-width: 100%;
+        height: 60px;
+    }
+    .links-navbar{
+        display: flex;
+        gap: 2rem;
+        a{
+            font-family: $font-1;
+        }
+    }
+    .toggle_btn{
+        color: #000000;
+        font-size: 1.4rem;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    li{
+        padding: 0.7rem;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+    a{
+        text-decoration: none;
+        font-family: $font-1;
+        color: black;
+        font-size: 1rem;
+    }
+    a:hover{
+        color: rgb(250, 215, 37);
+    }
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+
+/* RESPONSIVE DESIGN - NAVBAR */
+@media(max-width: 992px){
+    .navbar-principal .links-navbar{
+        display: none;
+    }
+    .navbar-principal .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}

@@ -1,0 +1,114 @@
+// Variables
+
+$color-h1-noground: black;
+$color-p: rgb(21, 9, 9);
+$font-1: 'Montserrat', sans-serif;
+$font-2: 'Bodoni Moda', serif;
+$font-3: 'Roboto', sans-serif;
+$font-fat: 'Gasoek One', sans-serif;
+$card-servicios-color: #F0F0F0;
+$card-color1: #213555;
+$card-title: black;
+$card-text: rgb(44, 44, 44);
+$card-body: #ffffff;
+
+// Partial dedicado a las media query
+
+// Responsive Cards
+// Small devices
+
+@media screen and (min-width: 340px) {
+    .seccion-servicios{
+        margin-inline: 1rem;
+        margin-top: -5rem;
+    }
+
+    .card-data-servicios{
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+// Medium devices
+
+@media screen and (min-width: 768px) {
+    .card-servicios{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+    .seccion-servicios{
+        margin-top: -5rem;
+    }
+}
+
+// Large devices
+
+@media screen and (min-width: 1120px) {
+    .seccion-servicios{
+       height: 100vh; 
+    }
+
+    .card-servicios{
+        grid-template-columns:repeat(3, 1fr) ;
+    }
+
+    .img-servicios{
+        width: 348px;
+    }
+
+    .card-data-servicios{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+
+// Medias de la galeria de imagenes, seccion galeria.
+
+@media(min-width:520px){
+    .galeria-imagenes{
+        .contenedor-galeria{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media(min-width:728px){
+    .galeria-imagenes{
+        .contenedor-galeria{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .testimonios{
+        .row-testimonios{
+            .col-testimonios{
+                flex: 100%;
+                max-width: 80%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .testimonios{
+        .row-testimonios{
+            .col-testimonios{
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+// responsive add`s
+
+@media(max-width: 992px){
+    main .contenedor-carousel{
+        margin-top: 250px;
+        display: flex;
+    }
+    body .portada-galeria{
+        margin-top: 17rem;
+    }
+}

@@ -139,24 +139,14 @@ li{
     display: block;
     margin: auto;
     margin-top: 10rem;
+    background-color: #213555;
     h1{
         @include flex;
-        margin: auto;
-        font-family: $font-fat;
-        line-height: 6rem;
-        font-size: 7rem;
-        padding: 2rem;
-        color: $card-servicios-color;
+        @include acerca-titulos;
     }
     p{
         @include flex;
-        margin: 5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-family: $font-1;
-        font-size: 2rem;
-        padding: 1rem;
-        color: #E5D283;
+        @include acerca-info;
     }
     img{
         width: 75%;
@@ -167,6 +157,25 @@ li{
     }
     img:hover{
         filter: brightness(40%);
+    }
+}
+
+// Desarrollo
+
+.desarrollo1{
+    margin-top: 3.4rem;
+    p{
+        text-decoration: none;
+        font-family: $font-1;
+        color: #213555;
+        display: block;
+        margin: auto;
+        outline: none;
+        padding: 0.5rem 1rem;
+        background-color: #E5D283;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
     }
 }
 
@@ -223,25 +232,15 @@ li{
 // Estilos de seccion de Año 2020 a 2021
 
 .desarrollo{
+    @include flex;
     .crecimiento{
         h1{
             @include flex;
-            margin: auto;
-            font-family: $font-fat;
-            line-height: 6rem;
-            font-size: 7rem;
-            padding: 2rem;
-            color: $card-servicios-color;
+            @include acerca-titulos;
         }
         p{
             @include flex;
-            margin: 5rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            font-family: $font-1;
-            font-size: 2rem;
-            padding: 1rem;
-            color: #E5D283;
+            @include acerca-info;
         }
     }
 }
@@ -252,6 +251,27 @@ li{
     img{
         @include img-responsive;
     }
+}
+
+// Acerca de mi
+
+.sobre-mi{
+    @include flex;
+    background-color: #213555;
+    .sobremi-1{
+        h1{
+            @include acerca-titulos;
+        }
+        p{
+            @include acerca-info;
+        }
+    }
+}
+
+.link-to-servicio-acerca{
+    background-color: #E5D283;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
 // /* NAV FOOTER */

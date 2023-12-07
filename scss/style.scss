@@ -12,6 +12,7 @@
 @import "./partials/servicios";
 @import "./partials/link-to";
 @import "./partials/mediaq";
+@import "./partials/contacto";
 
 // Variables
 
@@ -138,6 +139,7 @@ li{
 .historia{
     display: block;
     margin: auto;
+    width: 60px;
     margin-top: 10rem;
     background-color: #213555;
     h1{

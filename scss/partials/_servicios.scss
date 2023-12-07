@@ -62,8 +62,9 @@ $card-body: #ffffff;
         font-family: $font-1;
         font-size: 45px;
         text-align: center;
-        display: block;
+        display: flex;
         margin: auto;
+        justify-content: center;
         flex-wrap: wrap;
     }
     p{
@@ -129,6 +130,7 @@ $card-body: #ffffff;
                 }
                 .card-btn-servicios:hover{
                     text-decoration: underline;
+                    color: rgb(37, 143, 250);
                 }
             }
         }

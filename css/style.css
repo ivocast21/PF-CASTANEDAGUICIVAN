@@ -12,7 +12,7 @@
 }
 
 .links-navbar a:hover {
-  color: rgb(250, 215, 37);
+  color: rgb(37, 143, 250);
 }
 
 /* HEADER */
@@ -77,7 +77,7 @@ header {
   font-size: 1rem;
 }
 .dropdown_menu a:hover {
-  color: rgb(250, 215, 37);
+  color: rgb(37, 143, 250);
 }
 
 .dropdown_menu.open {
@@ -173,6 +173,7 @@ header {
   color: black;
   font-family: "Montserrat", sans-serif;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
@@ -182,6 +183,7 @@ header {
   font-family: "Roboto", sans-serif;
   color: #213555;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
@@ -190,6 +192,7 @@ header {
   color: rgb(21, 9, 9);
   font-family: "Bodoni Moda", serif;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
@@ -224,6 +227,7 @@ header {
 
 .separador-galeria-servicios {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: 50px;
@@ -468,8 +472,9 @@ header {
   font-family: "Montserrat", sans-serif;
   font-size: 45px;
   text-align: center;
-  display: block;
+  display: flex;
   margin: auto;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .servicios-productos p {
@@ -536,6 +541,7 @@ header {
 }
 .seccion-servicios .card-servicios .article-servicios .card-data-servicios .card-btn-servicios:hover {
   text-decoration: underline;
+  color: rgb(37, 143, 250);
 }
 
 .seccion-servicios .card-servicios .article-servicios:hover {
@@ -616,6 +622,7 @@ header {
 }
 .productos-servicios .ejemplosdesign p {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: auto;
@@ -662,6 +669,7 @@ header {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin-top: 1rem;
@@ -754,6 +762,193 @@ header {
     margin-top: 17rem;
   }
 }
+main .bienvenida-contacto h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  font-family: "Gasoek One", sans-serif;
+  line-height: 6rem;
+  font-size: 7rem;
+  padding: 2rem;
+  color: #F0F0F0;
+  color: black;
+  font-size: 4rem;
+}
+main .bienvenida-contacto p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #E5D283;
+  margin-top: -3.4rem;
+  color: #213555;
+  font-size: 1.4rem;
+}
+main .portada-contacto {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main .portada-contacto img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  width: 35%;
+}
+
+.titulo-redes-sociales h1 {
+  font-family: "Gasoek One", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3rem;
+}
+.titulo-redes-sociales p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #E5D283;
+  color: #213555;
+  font-size: 1.4rem;
+}
+.titulo-redes-sociales img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  margin-right: 0;
+  margin-top: -2rem;
+}
+
+.redes-sociales {
+  display: block;
+  padding: 1rem;
+  margin: auto;
+  margin-top: -6rem;
+  justify-content: center;
+}
+.redes-sociales section div {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.redes-sociales section div h1 {
+  font-family: "Gasoek One", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3rem;
+}
+
+.contenedor-redes {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+.contenedor-redes .boton-redes {
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+.contenedor-redes .boton-redes span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 20px;
+}
+.contenedor-redes .boton-redes .icono-redes {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  text-align: center;
+}
+.contenedor-redes .boton-redes .icono-redes i {
+  font-size: 25px;
+  line-height: 60px;
+}
+.contenedor-redes .boton-redes:hover {
+  width: 200px;
+}
+.contenedor-redes .boton-redes:nth-child(1):hover .icono-redes {
+  background: linear-gradient(30deg, #3040e6 10%, #d41356, #e74f31, #f0da4e);
+  color: #fff;
+}
+.contenedor-redes .boton-redes:nth-child(2):hover .icono-redes {
+  background: #12bcff;
+  color: #fff;
+}
+.contenedor-redes .boton-redes:nth-child(3):hover .icono-redes {
+  background: #123eff;
+  color: #fff;
+}
+.contenedor-redes .boton-redes:nth-child(4):hover .icono-redes {
+  background: #12ff51;
+  color: #fff;
+}
+
+.foto-decoracion {
+  margin-top: 3rem;
+  display: flex;
+}
+.foto-decoracion img {
+  display: block;
+  margin: auto;
+  width: 25%;
+  margin-right: 0;
+  filter: brightness(75%);
+}
+
+@media (max-width: 992px) {
+  .foto-decoracion {
+    display: block;
+    justify-content: center;
+  }
+  .foto-decoracion img {
+    display: block;
+    margin: auto;
+    width: 75%;
+  }
+}
+.portada-faqs {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.portada-faqs img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  width: 35%;
+}
+
 .info-nosotros {
   background-color: #4F709C;
 }
@@ -797,6 +992,7 @@ li {
   color: black;
   font-family: "Montserrat", sans-serif;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
@@ -808,6 +1004,7 @@ li {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
 }
@@ -863,11 +1060,13 @@ li {
 .historia {
   display: block;
   margin: auto;
+  width: 60px;
   margin-top: 10rem;
   background-color: #213555;
 }
 .historia h1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: auto;
@@ -879,6 +1078,7 @@ li {
 }
 .historia p {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: 5rem;
@@ -919,6 +1119,7 @@ li {
 
 .pasos-y-disciplina {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
 }
@@ -929,6 +1130,7 @@ li {
 }
 .pasos-y-disciplina .pasos h1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   font-family: "Gasoek One", sans-serif;
@@ -938,6 +1140,7 @@ li {
 }
 .pasos-y-disciplina .pasos p {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: 5rem;
@@ -955,6 +1158,7 @@ li {
 }
 .pasos-y-disciplina .disciplina h1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   font-family: "Gasoek One", sans-serif;
@@ -964,6 +1168,7 @@ li {
 }
 .pasos-y-disciplina .disciplina p {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: 5rem;
@@ -977,11 +1182,13 @@ li {
 
 .desarrollo {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
 }
 .desarrollo .crecimiento h1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: auto;
@@ -993,6 +1200,7 @@ li {
 }
 .desarrollo .crecimiento p {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: 5rem;
@@ -1012,6 +1220,7 @@ li {
 
 .sobre-mi {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   background-color: #213555;
@@ -1062,6 +1271,7 @@ li {
 /* FOOTER */
 .derechos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   margin: auto;

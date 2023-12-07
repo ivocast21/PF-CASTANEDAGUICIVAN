@@ -1,0 +1,172 @@
+// Variables
+
+$color-h1-noground: black;
+$color-p: rgb(21, 9, 9);
+$font-1: 'Montserrat', sans-serif;
+$font-2: 'Bodoni Moda', serif;
+$font-3: 'Roboto', sans-serif;
+$font-fat: 'Gasoek One', sans-serif;
+$card-servicios-color: #F0F0F0;
+$card-color1: #213555;
+$card-title: black;
+$card-text: rgb(44, 44, 44);
+$card-body: #ffffff;
+
+main{
+    .bienvenida-contacto{
+        h1{
+            @include flex;
+            @include acerca-titulos;
+            color: $color-h1-noground;
+            font-size: 4rem
+        }
+        p{
+            @include flex;
+            @include acerca-info;
+            margin-top: -3.4rem;
+            color: #213555;
+            font-size: 1.4rem;
+        }
+    }
+    .portada-contacto{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        img{
+            @include img-responsive;
+            width: 35%;
+        }
+    }
+}
+
+.titulo-redes-sociales{
+    h1{
+        font-family: $font-fat;
+        @include flex;
+        text-decoration: underline;
+        font-size: 3rem;
+    }
+    p{
+        @include flex;
+        @include acerca-info;
+        color: #213555;
+        font-size: 1.4rem;  
+    }
+    img{
+        @include img-responsive;
+        margin-right: 0;
+        margin-top: -2rem;
+    }
+}
+
+.redes-sociales{
+    display: block;
+    padding: 1rem;
+    margin: auto;
+    margin-top: -6rem;
+    justify-content: center;
+    section{
+        div{
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            h1{
+                font-family: $font-fat;
+                @include flex;
+                text-decoration: underline;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+.contenedor-redes{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    .boton-redes{
+        height: 60px;
+        width: 60px;
+        margin: 0 5px;
+        background: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        transition: all .3s ease-out;
+        overflow: hidden;
+        span{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 60px;
+            margin-left: 20px;
+        }
+        .icono-redes{
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            line-height: 60px;
+            text-align: center;
+            i{
+                font-size: 25px;
+                line-height: 60px;
+            }
+        }
+    }
+    .boton-redes:hover{
+        width: 200px;
+    }
+    .boton-redes:nth-child(1):hover .icono-redes{
+        background: linear-gradient(30deg, #3040e6 10%, #d41356, #e74f31, #f0da4e);
+        color: #fff;
+    }
+    .boton-redes:nth-child(2):hover .icono-redes{
+        background: #12bcff;
+        color: #fff;
+    }
+    .boton-redes:nth-child(3):hover .icono-redes{
+        background: #123eff;
+        color: #fff;
+    }
+    .boton-redes:nth-child(4):hover .icono-redes{
+        background: #12ff51;
+        color: #fff;
+    }
+}
+
+.foto-decoracion{
+    margin-top: 3rem;
+    display: flex;
+    img{
+        display: block;
+        margin: auto;
+        width: 25%;
+        margin-right: 0;
+        filter: brightness(75%);
+
+    }
+}
+
+@media (max-width: 992px){
+    .foto-decoracion{
+        display: block;
+        justify-content: center;
+        img{
+            display: block;
+            margin: auto;
+            width: 75%;
+        }
+    }
+}
+
+.portada-faqs{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    img{
+        @include img-responsive;
+        width: 35%;
+    }
+}

@@ -1,0 +1,149 @@
+// Variables
+
+$color-h1-noground: black;
+$color-p: rgb(21, 9, 9);
+$font-1: 'Montserrat', sans-serif;
+$font-2: 'Bodoni Moda', serif;
+$font-3: 'Roboto', sans-serif;
+$font-fat: 'Gasoek One', sans-serif;
+$card-servicios-color: #F0F0F0;
+$card-color1: #213555;
+$card-title: black;
+$card-text: rgb(44, 44, 44);
+$card-body: #ffffff;
+
+// Estilo de los FAQS
+
+.acordion-faqs{
+    display: flex;
+    max-width: 1010px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+    padding: 45px 90px 45px 60px;
+    margin: auto;
+    .image-faqs{
+        height: 420px;
+        width: 400px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .acordion-text{
+        width: 60%;
+        .title-acordion{
+            font-size: 35px;
+            font-weight: 600;
+            color: #0062ff;
+            margin: 1.8rem;
+        }
+        .faqs-text{
+            margin-top: 25px;
+            height: 263px;
+            overflow-y: auto;
+            li{
+                list-style: none;
+                cursor: pointer; 
+                .question-arrow{
+                    display: flex;
+                    justify-content: space-between;
+                    .question{
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #2b2b2b59;
+                        transition: all 0.3s ease;
+                    }
+                    .arrow{
+                        font-size: 20px;
+                        color: #2b2b2b59;
+                        transition: all 0.3s ease;
+                    }
+                }
+                .question-arrow:hover{
+                    .question{
+                        color: #0062ff;
+                    }
+                    .arrow{
+                        color: #0062ff;
+                    }
+                }
+                .line{
+                    display: block;
+                    height: 2px;
+                    width: 100%;
+                    margin: 10px 0;
+                    background: rgba(0, 0, 0, 0.1);
+              }
+              p{
+                width: 92%;
+                font-size: 15px;
+                font-weight: 500;
+                color: #2b2b2b59;;
+                display: none;
+              }
+            }
+            li.showAnswer{
+               p{
+                display: block;
+               } 
+               .question-arrow{
+                .arrow{
+                    transform: rotate(-180deg);
+                }
+               }
+               .question{
+                color: #0062ff;
+               }
+               .arrow{
+                color: #0062ff;
+                }
+            }
+        }
+        .faqs-text::-webkit-scrollbar{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 727px){
+    .acordion-faqs{
+        display: flex;
+        max-width: 100%;
+        padding: 45px 60px 45px 60px;
+        .image-faqs{
+            height: 360px;
+            width: 220px;
+        }
+        .acordion-text{
+            width: 63%;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .acordion-faqs{
+        flex-direction: column;
+        .image-faqs{
+            height: 360px;
+            width: 300px;
+            background: #0062ff;
+            width: 100%;
+            border-radius: 25px;
+            padding: 30px;
+        }
+        .acordion-text{
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 357px){
+    .acordion-faqs{
+        padding: 25px;
+    }
+}

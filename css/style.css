@@ -770,6 +770,15 @@ header {
     font-size: 2rem;
   }
 }
+@media (max-width: 412px) {
+  .historia div h1 {
+    font-size: 3.6rem;
+    line-height: 3.5rem;
+  }
+  .sobre-mi .sobremi-1 h1 {
+    font-size: 3.6rem;
+  }
+}
 main .bienvenida-contacto h1 {
   font-family: "Gasoek One", sans-serif;
   display: flex;
@@ -879,6 +888,10 @@ main .portada-contacto img {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-out;
   overflow: hidden;
+}
+.contenedor-redes .boton-redes a {
+  text-decoration: none;
+  color: black;
 }
 .contenedor-redes .boton-redes span {
   font-size: 20px;
@@ -1010,6 +1023,131 @@ main .portada-contacto img {
     transform: translateY(0px);
   }
 }
+.acordion-faqs {
+  display: flex;
+  max-width: 1010px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F0F0F0;
+  border-radius: 20px;
+  padding: 45px 90px 45px 60px;
+  margin: auto;
+}
+.acordion-faqs .image-faqs {
+  height: 420px;
+  width: 400px;
+}
+.acordion-faqs .image-faqs img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.acordion-faqs .acordion-text {
+  width: 60%;
+}
+.acordion-faqs .acordion-text .title-acordion {
+  font-size: 35px;
+  font-weight: 600;
+  color: #0062ff;
+  margin: 1.8rem;
+}
+.acordion-faqs .acordion-text .faqs-text {
+  margin-top: 25px;
+  height: 263px;
+  overflow-y: auto;
+}
+.acordion-faqs .acordion-text .faqs-text li {
+  list-style: none;
+  cursor: pointer;
+}
+.acordion-faqs .acordion-text .faqs-text li .question-arrow {
+  display: flex;
+  justify-content: space-between;
+}
+.acordion-faqs .acordion-text .faqs-text li .question-arrow .question {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(43, 43, 43, 0.3490196078);
+  transition: all 0.3s ease;
+}
+.acordion-faqs .acordion-text .faqs-text li .question-arrow .arrow {
+  font-size: 20px;
+  color: rgba(43, 43, 43, 0.3490196078);
+  transition: all 0.3s ease;
+}
+.acordion-faqs .acordion-text .faqs-text li .question-arrow:hover .question {
+  color: #0062ff;
+}
+.acordion-faqs .acordion-text .faqs-text li .question-arrow:hover .arrow {
+  color: #0062ff;
+}
+.acordion-faqs .acordion-text .faqs-text li .line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.acordion-faqs .acordion-text .faqs-text li p {
+  width: 92%;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(43, 43, 43, 0.3490196078);
+  display: none;
+}
+.acordion-faqs .acordion-text .faqs-text li.showAnswer p {
+  display: block;
+}
+.acordion-faqs .acordion-text .faqs-text li.showAnswer .question-arrow .arrow {
+  transform: rotate(-180deg);
+}
+.acordion-faqs .acordion-text .faqs-text li.showAnswer .question {
+  color: #0062ff;
+}
+.acordion-faqs .acordion-text .faqs-text li.showAnswer .arrow {
+  color: #0062ff;
+}
+.acordion-faqs .acordion-text .faqs-text::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 727px) {
+  .acordion-faqs {
+    display: flex;
+    max-width: 100%;
+    padding: 45px 60px 45px 60px;
+  }
+  .acordion-faqs .image-faqs {
+    height: 360px;
+    width: 220px;
+  }
+  .acordion-faqs .acordion-text {
+    width: 63%;
+  }
+}
+@media (max-width: 500px) {
+  .acordion-faqs {
+    flex-direction: column;
+  }
+  .acordion-faqs .image-faqs {
+    height: 360px;
+    width: 300px;
+    background: #0062ff;
+    width: 100%;
+    border-radius: 25px;
+    padding: 30px;
+  }
+  .acordion-faqs .acordion-text {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 357px) {
+  .acordion-faqs {
+    padding: 25px;
+  }
+}
 .info-nosotros {
   background-color: #4F709C;
 }
@@ -1121,7 +1259,6 @@ li {
 .historia {
   display: block;
   margin: auto;
-  width: 60px;
   margin-top: 10rem;
   background-color: #213555;
 }

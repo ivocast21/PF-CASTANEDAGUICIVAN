@@ -131,3 +131,22 @@ $card-body: #ffffff;
         }
     }
 }
+
+@media ( max-width: 412px){
+    .historia{
+        div{
+            h1{
+                font-size: 3.6rem;
+                line-height: 3.5rem;
+            }
+        }
+    }
+
+    .sobre-mi{
+        .sobremi-1{
+            h1{
+                font-size: 3.6rem;
+            }
+        }
+    }
+}

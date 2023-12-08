@@ -56,10 +56,4 @@ items.forEach((item,index) => {
 
 // Seccion FAQS
 
-const faq = document.querySelectorAll(".faqs");
-
-faq.forEach((faqs) => {
-    faq.addEventListener("click", () => {
-        faq.classList.toggle("active");
-    });
-});
+// El JS de la seccion de los FAQS va a estar alojado en el respectivo HTMl debido a posibles errores de confusion.

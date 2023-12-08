@@ -112,3 +112,22 @@ $card-body: #ffffff;
         margin-top: 17rem;
     }
 }
+
+@media (max-width: 412px){
+    main{
+        .bienvenida-contacto{
+            div{
+                h1{
+                font-size: 2.3rem;
+                }
+            }
+        }
+    }
+    .titulo-redes-sociales{
+        div{
+            h1{
+            font-size: 2rem;
+            }
+        }
+    }
+}

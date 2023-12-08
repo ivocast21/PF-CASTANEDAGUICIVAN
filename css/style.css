@@ -762,19 +762,24 @@ header {
     margin-top: 17rem;
   }
 }
+@media (max-width: 412px) {
+  main .bienvenida-contacto div h1 {
+    font-size: 2.3rem;
+  }
+  .titulo-redes-sociales div h1 {
+    font-size: 2rem;
+  }
+}
 main .bienvenida-contacto h1 {
+  font-family: "Gasoek One", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin: auto;
-  font-family: "Gasoek One", sans-serif;
-  line-height: 6rem;
-  font-size: 7rem;
-  padding: 2rem;
-  color: #F0F0F0;
-  color: black;
-  font-size: 4rem;
+  text-decoration: underline;
+  font-size: 3rem;
+  margin-top: 1.4rem;
+  flex-wrap: wrap;
 }
 main .bienvenida-contacto p {
   display: flex;
@@ -788,7 +793,6 @@ main .bienvenida-contacto p {
   font-size: 2rem;
   padding: 1rem;
   color: #E5D283;
-  margin-top: -3.4rem;
   color: #213555;
   font-size: 1.4rem;
 }
@@ -949,6 +953,63 @@ main .portada-contacto img {
   width: 35%;
 }
 
+.seccion-faqs {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.seccion-faqs .faqs {
+  max-width: 700px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+.seccion-faqs .faqs .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.seccion-faqs .faqs .question h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+.seccion-faqs .faqs .question svg {
+  transition: transform 0.5s ease-in;
+}
+.seccion-faqs .faqs .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+}
+.seccion-faqs .faqs .answer p {
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+.seccion-faqs .faqs:active .answer {
+  max-height: 300px;
+  animation: fade 1s ease-in;
+}
+.seccion-faqs .faqs:active .question svg {
+  transform: rotate(180deg);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .info-nosotros {
   background-color: #4F709C;
 }

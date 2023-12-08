@@ -53,3 +53,13 @@ items.forEach((item,index) => {
             item.style.flex = "1";
         })
 });
+
+// Seccion FAQS
+
+const faq = document.querySelectorAll(".faqs");
+
+faq.forEach((faqs) => {
+    faq.addEventListener("click", () => {
+        faq.classList.toggle("active");
+    });
+});

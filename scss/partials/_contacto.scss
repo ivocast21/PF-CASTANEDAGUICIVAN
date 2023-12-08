@@ -14,16 +14,17 @@ $card-body: #ffffff;
 
 main{
     .bienvenida-contacto{
-        h1{
+        h1{    
+            font-family: $font-fat;
             @include flex;
-            @include acerca-titulos;
-            color: $color-h1-noground;
-            font-size: 4rem
+            text-decoration: underline;
+            font-size: 3rem;
+            margin-top: 1.4rem;
+            flex-wrap: wrap;
         }
         p{
             @include flex;
             @include acerca-info;
-            margin-top: -3.4rem;
             color: #213555;
             font-size: 1.4rem;
         }
@@ -78,6 +79,8 @@ main{
         }
     }
 }
+
+// Seccion Redes sociales (botones)
 
 .contenedor-redes{
     box-sizing: border-box;
@@ -168,5 +171,69 @@ main{
     img{
         @include img-responsive;
         width: 35%;
+    }
+}
+
+// Estilos seccion FAQ
+
+.seccion-faqs{
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .faqs{
+        max-width: 700px;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid black;
+        cursor: pointer;
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                font-size: 2rem;
+                font-weight: 500;
+                font-family: $font-1;
+            }
+            svg{
+                transition: transform 0.5s ease-in;
+            }
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.4s ease;
+           p{
+            padding-top: 1rem;
+            line-height: 1.6;
+            font-size: 1.4rem;
+            font-family: $font-1;
+           }
+        }
+    }
+    .faqs:active{
+        .answer{
+            max-height: 300px;
+            animation: fade 1s ease-in;
+        }
+        .question{
+            svg{
+                transform: rotate(180deg);
+            }
+        }
+    } 
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+       opacity: 1;
+       transform: translateY(0px); 
     }
 }

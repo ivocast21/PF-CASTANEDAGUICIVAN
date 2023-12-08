@@ -20,10 +20,9 @@ $card-body: #ffffff;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: #F0F0F0;
-    border-radius: 20px;
     padding: 45px 90px 45px 60px;
     margin: auto;
+    margin-top: -8rem;
     .image-faqs{
         height: 420px;
         width: 400px;
@@ -109,6 +108,8 @@ $card-body: #ffffff;
     }
 }
 
+// Media query FAQS
+
 @media (max-width: 727px){
     .acordion-faqs{
         display: flex;
@@ -145,5 +146,41 @@ $card-body: #ffffff;
 @media (max-width: 357px){
     .acordion-faqs{
         padding: 25px;
+    }
+}
+
+// Estilo seccion de Formulario De Contacto
+
+.titulo-formulario{
+    h1{
+        @include flex;
+        font-size: 2rem;
+        font-family: $font-fat;
+        text-decoration: underline;
+    }
+}
+
+.contenedor-form{
+    background-color: #F0F0F0;
+    width: 95%;
+    min-width: 420px;    
+    padding: 35px 50px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 20px 30px 25px rgba(0, 0, 0, 0.15);
+    h1{
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        color: #213555;
+    }
+    P{
+       position: relative;
+       margin: auto;
+       width: 100%;
+       text-align: center; 
+       color: #606060;
     }
 }

@@ -34,12 +34,6 @@ $card-body: #ffffff;
     }
     .acordion-text{
         width: 60%;
-        .title-acordion{
-            font-size: 35px;
-            font-weight: 600;
-            color: #0062ff;
-            margin: 1.8rem;
-        }
         .faqs-text{
             margin-top: 25px;
             height: 263px;
@@ -135,6 +129,7 @@ $card-body: #ffffff;
             width: 100%;
             border-radius: 25px;
             padding: 30px;
+            margin-top: 4rem;
         }
         .acordion-text{
             width: 100%;
@@ -162,25 +157,75 @@ $card-body: #ffffff;
 
 .contenedor-form{
     background-color: #F0F0F0;
-    width: 95%;
+    width: 80%;
     min-width: 420px;    
     padding: 35px 50px;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 50%;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
     border-radius: 10px;
     box-shadow: 20px 30px 25px rgba(0, 0, 0, 0.15);
     h1{
         font-size: 30px;
-        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
         text-align: center;
         color: #213555;
     }
-    P{
+    p{
        position: relative;
        margin: auto;
        width: 100%;
        text-align: center; 
        color: #606060;
+       font-size: 14px;
+       font-weight: 400;
+       font-family: 'Poppins', sans-serif;
+    }
+    form{
+        width: 100%;
+        position: relative;
+        margin: 30px auto 0 auto;
+        .row-form{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 20px 30px;
+            margin-bottom: 20px;
+            .column-form{
+                label{
+                    color: #1c093c;
+                    font-size: 14px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                }
+                textarea{
+                    @include text-input;
+                    font-family: 'Poppins', sans-serif;
+                    resize: none
+                }
+                textarea:focus{
+                    outline: none;
+                    border-color: #0062ff;
+                }
+                input{
+                    @include text-input;
+                    font-family: 'Poppins', sans-serif;
+                }
+                input:focus{
+                    outline: none;
+                    border-color: #0062ff;
+                }
+            }
+        }
+        .btn-form-cont{
+            border: none;
+            padding: 10px 20px;
+            background: linear-gradient(130deg, #0062ff, #6d97db);
+            color: #F0F0F0;
+            border-radius: 10px;
+        }
     }
 }

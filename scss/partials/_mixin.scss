@@ -29,3 +29,12 @@
     padding: 1rem;
     color: #E5D283;
 }
+
+@mixin text-input{
+    width: 100%;
+    font-weight: 400;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1.2px solid #c4cae0;
+    margin-top: 5px;
+}

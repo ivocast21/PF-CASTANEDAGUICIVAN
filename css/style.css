@@ -496,20 +496,25 @@ header {
   padding: 30px;
   margin-top: 2rem;
 }
-.servicios-productos h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 45px;
-  text-align: center;
-  display: flex;
+.servicios-productos div {
+  display: block;
   margin: auto;
+}
+.servicios-productos div h1 {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
   flex-wrap: wrap;
 }
 .servicios-productos p {
   text-align: center;
   display: block;
   margin: auto;
-  font-family: "Bodoni Moda", serif;
+  font-family: "Roboto", sans-serif;
   color: rgb(21, 9, 9);
   font-size: 25px;
 }
@@ -1537,6 +1542,7 @@ li {
   justify-content: center;
   text-align: center;
   background-color: #213555;
+  justify-content: center;
 }
 .sobre-mi .sobremi-1 h1 {
   margin: auto;
@@ -1582,7 +1588,7 @@ li {
 }
 
 /* FOOTER */
-.derechos {
+.derechos p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

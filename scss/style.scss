@@ -260,6 +260,7 @@ li{
 .sobre-mi{
     @include flex;
     background-color: #213555;
+    justify-content: center;
     .sobremi-1{
         h1{
             @include acerca-titulos;
@@ -299,7 +300,9 @@ li{
 
 /* FOOTER */
 .derechos{
-    @include flex;
-    margin: auto;
+    p{
+        @include flex;
+        margin: auto;
     flex-wrap: wrap;
+    }
 }

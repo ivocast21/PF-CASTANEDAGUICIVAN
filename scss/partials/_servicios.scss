@@ -58,20 +58,22 @@ $card-body: #ffffff;
 .servicios-productos{
     padding: 30px;
     margin-top: 2rem;
-    h1{
-        font-family: $font-1;
-        font-size: 45px;
-        text-align: center;
-        display: flex;
+    div{
+        display: block;
         margin: auto;
-        justify-content: center;
-        flex-wrap: wrap;
+        h1{
+            @include flex;
+            font-family: $font-1;
+            font-weight: 500;
+            font-size: 50px;
+            flex-wrap: wrap;
+        }
     }
     p{
         text-align: center;
         display: block;
         margin: auto;
-        font-family: $font-2;
+        font-family: $font-3;
         color: $color-p;
         font-size: 25px;
     }

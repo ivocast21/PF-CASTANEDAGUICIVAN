@@ -371,6 +371,18 @@ header {
     transform: translate(-50%, -50%);
   }
 }
+
+@media (max-width: 240px) {
+
+    .portada-galeria h1{
+        font-size: 0.6rem;
+    }
+
+    .portada-galeria p{
+        font-size: 0.2em;
+    }
+}
+
 /* GALERIA GRID */
 .galeria-img {
   width: 100%;

@@ -60,9 +60,8 @@ li{
     margin-bottom: 50px;
 }
 .img-explorer{
-    display: flex;
+    @include flex;
     margin: auto;
-    justify-content: center;
     max-width: 100%;
     height: 70px;
 }
@@ -72,7 +71,6 @@ li{
         color: $color-h1-noground;
         font-family: $font-1;
         @include flex;;
-        flex-wrap: wrap;
         clear: both;
         margin-top: 20px;
     }
@@ -284,16 +282,12 @@ li{
 }
 
 .navbar-footer{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include flex;
     margin-top: 25px;
 }
 
 .navbar-footer .links-navbar{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include flex;
     gap: 2rem;
 }
 
@@ -302,6 +296,5 @@ li{
     p{
         @include flex;
         margin: auto;
-    flex-wrap: wrap;
     }
 }

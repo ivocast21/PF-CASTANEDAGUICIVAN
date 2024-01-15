@@ -37,9 +37,7 @@ $card-body: #ffffff;
         margin: 26px auto;
     }
     .row-testimonios{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include flex;
     }
     .col-testimonios{
         flex: 33.33%;

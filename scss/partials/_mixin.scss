@@ -38,3 +38,7 @@
     border: 1.2px solid #c4cae0;
     margin-top: 5px;
 }
+
+@mixin transform5050{
+    transform: translate(-50%, -50%);
+}

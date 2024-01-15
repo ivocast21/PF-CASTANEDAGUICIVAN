@@ -444,6 +444,18 @@ header {
     grid-column-start: span 2;
   }
 }
+
+@media  screen and (max-width:380px){
+    .galeria-img{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .galeria-img .box-galeria-img img{
+        height: 200px;
+    }
+}
+
 .galeria-imagenes {
   margin-bottom: 4rem;
 }
